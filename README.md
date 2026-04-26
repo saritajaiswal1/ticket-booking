@@ -1,5 +1,5 @@
-*Author
-Sarita Jaiswal
+👩‍💻Author
+** Sarita Jaiswal **
 
 Acces UI : http://localhost:8080/swagger-ui/index.html#
 
@@ -39,11 +39,17 @@ It supports browsing shows, selecting seats, applying pricing strategies, and bo
 ## 📂 Project Structure
 
 com.ticket.booking
+
 │── controller # REST Controllers
+
 │── service # Business Logic
+
 │── repository # JPA Repositories
+
 │── model # Entity Classes
+
 │── pricing # Pricing Strategy Pattern
+
 │── config # Configurations (CORS, Swagger, etc.)
 
 
