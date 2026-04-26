@@ -13,6 +13,8 @@ It supports browsing shows, selecting seats, applying pricing strategies, and bo
 🔒 Seat locking with optimistic locking
 📊 REST APIs with Swagger UI
 🗄️ PostgreSQL database integration
+
+
 🛠️ Tech Stack
 Java 17
 Spring Boot 3.x
@@ -21,6 +23,8 @@ Spring Data JPA
 PostgreSQL
 Maven
 Swagger (OpenAPI)
+
+
 📂 Project Structure
 com.ticket.booking
 │── controller        # REST Controllers
