@@ -1,36 +1,55 @@
 *Author
 Sarita Jaiswal
 
-A Movie Ticket Booking System
+Acces UI : http://localhost:8080/swagger-ui/index.html#
 
-A Spring Boot–based backend application for booking movie tickets.
+# 🎬 Movie Ticket Booking System
+
+A Spring Boot–based backend application for booking movie tickets.  
 It supports browsing shows, selecting seats, applying pricing strategies, and booking tickets.
-*Features
-> Browse shows by city, movie, and date
-> Book seats for a show
-> Dynamic pricing strategy (based on offer type)
-> Seat locking with optimistic locking
-> REST APIs with Swagger UI
-> PostgreSQL database integration
 
+---
 
+## 👨‍💻 Author
+**Sarita Jaiswal**
 
-🛠️ Tech Stack
-Java 17
-Spring Boot 3.x
-Spring Web
-Spring Data JPA
-PostgreSQL
-Maven
-Swagger (OpenAPI)
+---
 
+## 🚀 Features
+- 🎥 Browse shows by city, movie, and date  
+- 🎟️ Book seats for a show  
+- 💰 Dynamic pricing strategy (based on offer type)  
+- 🔒 Seat locking with optimistic locking  
+- 📊 REST APIs with Swagger UI  
+- 🗄️ PostgreSQL database integration  
 
-📂 Project Structure
+---
+
+## 🛠️ Tech Stack
+- Java 17  
+- Spring Boot 3.x  
+- Spring Web  
+- Spring Data JPA  
+- PostgreSQL  
+- Maven  
+- Swagger (OpenAPI)  
+
+---
+
+## 📂 Project Structure
 
 com.ticket.booking
-│── controller        # REST Controllers
-│── service           # Business Logic
-│── repository        # JPA Repositories
-│── model             # Entity Classes
-│── pricing           # Pricing Strategy Pattern
-│── config            # Configurations (CORS, Swagger, etc.)
+│── controller # REST Controllers
+│── service # Business Logic
+│── repository # JPA Repositories
+│── model # Entity Classes
+│── pricing # Pricing Strategy Pattern
+│── config # Configurations (CORS, Swagger, etc.)
+
+
+---
+
+## ▶️ How to Run
+```bash
+mvn clean install
+mvn spring-boot:run
