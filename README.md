@@ -1,4 +1,4 @@
-## 👨‍💻 Author
+## 👩‍💻 Author
 **Sarita Jaiswal**
 
 ------------------------
