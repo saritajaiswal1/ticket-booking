@@ -1,5 +1,7 @@
-👩‍💻Author
-** Sarita Jaiswal **
+## 👨‍💻 Author
+**Sarita Jaiswal**
+
+------------------------
 
 Acces UI : http://localhost:8080/swagger-ui/index.html#
 
@@ -7,11 +9,6 @@ Acces UI : http://localhost:8080/swagger-ui/index.html#
 
 A Spring Boot–based backend application for booking movie tickets.  
 It supports browsing shows, selecting seats, applying pricing strategies, and booking tickets.
-
----
-
-## 👨‍💻 Author
-**Sarita Jaiswal**
 
 ---
 
