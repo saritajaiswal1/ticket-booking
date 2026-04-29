@@ -3,13 +3,11 @@ package com.ticket.booking.controller;
 import com.ticket.booking.model.Show;
 import com.ticket.booking.service.BrowseService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api/shows")
 @RequiredArgsConstructor
