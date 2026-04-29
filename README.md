@@ -4,6 +4,7 @@
 ------------------------
 
 Acces UI : http://localhost:8080/swagger-ui/index.html#
+React UI : http://localhost:3000/
 
 # 🎬 Movie Ticket Booking System
 
