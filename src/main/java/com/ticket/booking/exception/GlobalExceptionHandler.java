@@ -15,4 +15,16 @@ public class GlobalExceptionHandler {
                 Map.of("error", ex.getMessage())
         );
     }
+
+    @ExceptionHandler(SeatUnavailableException.class)
+    public ResponseEntity<?> handle(SeatUnavailableException ex) {
+        return ResponseEntity.badRequest().body(
+                Map.of("message ", ex.getMessage())
+        );
+    }
+
+    @ExceptionHandler(SeatBookedException.class)
+    public ResponseEntity<?> handle(SeatBookedException ex){
+        return ResponseEntity.badRequest().body(Map.of("message ",ex.getMessage()));
+    }
 }

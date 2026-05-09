@@ -15,4 +15,7 @@ public class Booking {
     private String showId;
 
     private double totalAmount;
+
+    public void setSeatNumber(int seat) {
+    }
 }

@@ -2,9 +2,8 @@ package com.ticket.booking.model;
 
 import java.util.List;
 
-public record BookingResponse(
+public record BookingSummaryResponse(
         String bookingId,
-        double totalAmount,
         List<String> seats
-) {}
-
+) {
+}

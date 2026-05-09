@@ -1,8 +1,15 @@
 package com.ticket.booking.service;
 
+import java.awt.print.Book;
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
+import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
+import com.ticket.booking.exception.SeatBookedException;
+import com.ticket.booking.exception.SeatUnavailableException;
 import com.ticket.booking.model.*;
 import com.ticket.booking.repository.BookingRepository;
 import com.ticket.booking.repository.SeatRepository;
@@ -139,5 +146,34 @@ public class BookingService {
                 total,
                 seats.stream().map(Seat::getId).toList()
         );
+    }
+
+    public BookingResponse bookTickets(String id, int seat) {
+
+           //threads-> try to acquire locks->t1->payment gateway
+           //lock the seats->pay->transaction successful->allocate the seat to t1
+           //t2->t1, t2->n-s1 seats
+
+        Booking booking=bookingRepo.findById(id)
+                .orElseThrow(()->new SeatUnavailableException("Seat with requested id is unavailable for booking : "+id));
+
+        try{
+            //Book seat
+            booking.setSeatNumber(seat);
+
+            Booking savedBooking = bookingRepo.save(booking);
+
+            //Thread pool for async tasks if needed
+            ExecutorService executor=Executors.newFixedThreadPool(3);
+
+            //Example async task
+            executor.submit(()->{System.out.println("Processing payment for seat : "+seat);});
+
+            executor.shutdown();
+
+            return new BookingResponse(savedBooking.getId(),savedBooking.getTotalAmount(),List.of("Seat - "+seat));
+        } catch (SeatBookedException e) {
+            throw new SeatBookedException("Seat already booked : "+seat);
+        }
     }
 }
